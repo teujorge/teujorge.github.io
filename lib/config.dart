@@ -15,10 +15,6 @@ class Config {
           icon: const Icon(Icons.home_rounded),
           label: const Text("Home"),
           autofocus: title == "Home",
-          style: ButtonStyle(
-            backgroundColor:
-                MaterialStateColor.resolveWith((_) => Colors.black),
-          ),
           onPressed: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -32,10 +28,6 @@ class Config {
           icon: const Icon(Icons.work_rounded),
           label: const Text("Projects"),
           autofocus: title == "Projects",
-          style: ButtonStyle(
-            backgroundColor:
-                MaterialStateColor.resolveWith((_) => Colors.black),
-          ),
           onPressed: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
@@ -49,10 +41,10 @@ class Config {
           icon: const Icon(Icons.picture_as_pdf_rounded),
           label: const Text("Resume"),
           autofocus: title == "Resume",
-          style: ButtonStyle(
-            backgroundColor:
-                MaterialStateColor.resolveWith((_) => Colors.black),
-          ),
+          // style: ButtonStyle(
+          //   foregroundColor:
+          //       MaterialStateColor.resolveWith((_) => Colors.black),
+          // ),
           onPressed: () {
             Navigator.of(context).pushReplacement(
               MaterialPageRoute(
