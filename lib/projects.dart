@@ -16,6 +16,9 @@ class _ProjectsPageState extends State<ProjectsPage> {
 
   @override
   Widget build(BuildContext context) {
+    Config.screenWidth = MediaQuery.of(context).size.width;
+    Config.screenHeight = MediaQuery.of(context).size.height;
+
     _body = const Center(
       child: Text(
         'in progress!',
