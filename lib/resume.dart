@@ -20,8 +20,6 @@ class _ResumePageState extends State<ResumePage> {
     Config.screenWidth = MediaQuery.of(context).size.width;
     Config.screenHeight = MediaQuery.of(context).size.height;
 
-    print(_scale);
-
     // min max scale
     if (_scale > 2.5) {
       _scale = 2.5;
