@@ -12,40 +12,17 @@ class ResumePage extends StatefulWidget {
 }
 
 class _ResumePageState extends State<ResumePage> {
-  int _counter = 0;
   Center _body = const Center();
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
     _body = Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text(
-            'You have pushed the button this many times:',
-          ),
-          Text(
-            '$_counter',
-            style: Theme.of(context).textTheme.headline4,
-          ),
-        ],
-      ),
+      child: Image.asset("Resume-2022.png"),
     );
 
     return Scaffold(
       appBar: Config.getAppBar(widget.title, context),
       body: _body,
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
     );
   }
 }
