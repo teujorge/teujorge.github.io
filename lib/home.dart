@@ -44,6 +44,9 @@ class _HomePageState extends State<HomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
 
+    Config.screenWidth = MediaQuery.of(context).size.width;
+    Config.screenHeight = MediaQuery.of(context).size.height;
+
     _body = Center(
       // Center is a layout widget. It takes a single child and positions it
       // in the middle of the parent.
