@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'config.dart';
 import 'home.dart';
 
 void main() {
@@ -14,11 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Matheus Jorge',
-      theme: ThemeData.from(colorScheme: const ColorScheme.dark()),
+      theme: ThemeData.from(
+        colorScheme: Config.colorScheme,
+      ),
       home: const HomePage(),
     );
   }
 }
 
 // GH Pages : https://www.youtube.com/watch?v=4yQ27SSnWzk
+
 
