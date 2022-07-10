@@ -17,7 +17,15 @@ class _ResumePageState extends State<ResumePage> {
   @override
   Widget build(BuildContext context) {
     _body = Center(
-      child: Image.asset("Resume-2022.png"),
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(24)),
+          child: SingleChildScrollView(
+            child: Image.asset("Resume-2022.png"),
+          ),
+        ),
+      ),
     );
 
     return Scaffold(
