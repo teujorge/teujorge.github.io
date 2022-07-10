@@ -5,6 +5,21 @@ import 'resume.dart';
 import 'projects.dart';
 
 class Config {
+  static ColorScheme colorScheme = const ColorScheme(
+    brightness: Brightness.dark,
+    primary: Color(0xffbb86fc),
+    onPrimary: Colors.black,
+    secondary: Color(0xff03dac6),
+    onSecondary: Colors.black,
+    error: Color(0xffcf6679),
+    onError: Colors.black,
+    background: Color(0xff121212),
+    onBackground: Colors.white,
+    surface: Color(0xff121212),
+    onSurface: Colors.white,
+  );
+  static double screenWidth = 0;
+  static double screenHeight = 0;
   static AppBar getAppBar(String title, BuildContext context) {
     return AppBar(
       // Here we take the value from the MyHomePage object that was created by
@@ -13,7 +28,7 @@ class Config {
       actions: [
         TextButton.icon(
           icon: const Icon(Icons.home_rounded),
-          label: const Text("Home"),
+          label: screenWidth > 500 ? const Text("Home") : const SizedBox(),
           autofocus: title == "Home",
           onPressed: () {
             Navigator.of(context).pushReplacement(
@@ -26,7 +41,7 @@ class Config {
         ),
         TextButton.icon(
           icon: const Icon(Icons.work_rounded),
-          label: const Text("Projects"),
+          label: screenWidth > 500 ? const Text("Projects") : const SizedBox(),
           autofocus: title == "Projects",
           onPressed: () {
             Navigator.of(context).pushReplacement(
@@ -39,7 +54,7 @@ class Config {
         ),
         TextButton.icon(
           icon: const Icon(Icons.picture_as_pdf_rounded),
-          label: const Text("Resume"),
+          label: screenWidth > 500 ? const Text("Resume") : const SizedBox(),
           autofocus: title == "Resume",
           // style: ButtonStyle(
           //   foregroundColor:
