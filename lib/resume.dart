@@ -13,15 +13,20 @@ class ResumePage extends StatefulWidget {
 
 class _ResumePageState extends State<ResumePage> {
   Center _body = const Center();
-  double _scale = -1;
+  double _scale = 2;
 
   @override
   Widget build(BuildContext context) {
     Config.screenWidth = MediaQuery.of(context).size.width;
     Config.screenHeight = MediaQuery.of(context).size.height;
 
-    if (_scale == -1) {
-      _scale = 2;
+    print(_scale);
+
+    // min max scale
+    if (_scale > 2.5) {
+      _scale = 2.5;
+    } else if (_scale < 0.9) {
+      _scale = 0.9;
     }
 
     _body = Center(
@@ -40,7 +45,6 @@ class _ResumePageState extends State<ResumePage> {
                     "Resume-2022.png",
                     width: Config.screenWidth * 0.8 * _scale,
                     height: Config.screenHeight * 0.75 * _scale,
-                    // fit: BoxFit.contain,
                   ),
                 ),
                 Row(
