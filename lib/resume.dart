@@ -13,11 +13,16 @@ class ResumePage extends StatefulWidget {
 
 class _ResumePageState extends State<ResumePage> {
   Center _body = const Center();
+  double _scale = -1;
 
   @override
   Widget build(BuildContext context) {
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    Config.screenWidth = MediaQuery.of(context).size.width;
+    Config.screenHeight = MediaQuery.of(context).size.height;
+
+    if (_scale == -1) {
+      _scale = 2;
+    }
 
     _body = Center(
       child: Padding(
@@ -25,18 +30,42 @@ class _ResumePageState extends State<ResumePage> {
         child: ClipRRect(
           borderRadius: const BorderRadius.all(Radius.circular(24)),
           child: Container(
+            width: Config.screenWidth * 0.9,
+            height: Config.screenHeight * 0.9,
             color: Colors.black,
-            child: InteractiveViewer(
-              alignPanAxis: true,
-              constrained: false,
-              minScale: 0.1,
-              maxScale: 4,
-              child: Image.asset(
-                "Resume-2022.png",
-                width: width * 0.8,
-                height: height * 0.75,
-                fit: BoxFit.contain,
-              ),
+            child: Stack(
+              children: [
+                SingleChildScrollView(
+                  child: Image.asset(
+                    "Resume-2022.png",
+                    width: Config.screenWidth * 0.8 * _scale,
+                    height: Config.screenHeight * 0.75 * _scale,
+                    // fit: BoxFit.contain,
+                  ),
+                ),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _scale += 0.1;
+                        });
+                      },
+                      color: Config.colorScheme.secondary,
+                      icon: const Icon(Icons.add_circle_rounded),
+                    ),
+                    IconButton(
+                      onPressed: () {
+                        setState(() {
+                          _scale -= 0.1;
+                        });
+                      },
+                      color: Config.colorScheme.primary,
+                      icon: const Icon(Icons.cancel_rounded),
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
         ),
@@ -46,6 +75,15 @@ class _ResumePageState extends State<ResumePage> {
     return Scaffold(
       appBar: Config.getAppBar(widget.title, context),
       body: _body,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          print("download it!");
+        },
+        tooltip: 'Download Resume',
+        child: const Icon(
+          Icons.download_rounded,
+        ),
+      ),
     );
   }
 }
