@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_website/UI/projects.dart';
-import '../config.dart';
-import 'about.dart';
-import 'contact.dart';
-import '../Widget/project_data.dart';
-import 'work.dart';
-import '../Widget/custom_text.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
-import 'package:transparent_image/transparent_image.dart';
+
 import '../Widget/screen_content.dart';
+import '../config.dart';
 import 'parallax.dart';
+import 'contact.dart';
+import 'about.dart';
+import 'work.dart';
 
 class HomePage extends StatefulWidget {
   HomePage();
