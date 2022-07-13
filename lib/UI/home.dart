@@ -5,7 +5,7 @@ import '../config.dart';
 import 'about.dart';
 import 'contact.dart';
 import '../Widget/project_data.dart';
-import 'Work.dart';
+import 'work.dart';
 import '../Widget/custom_text.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:transparent_image/transparent_image.dart';
