@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
-
-import 'config.dart';
-import 'home.dart';
+import 'UI/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Matheus Jorge',
-      theme: ThemeData.from(
-        colorScheme: Config.colorScheme,
-      ),
-      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      theme: ThemeData.from(colorScheme: ColorScheme.light()),
+      darkTheme: ThemeData.from(colorScheme: ColorScheme.dark()),
     );
   }
 }
-
-// GH Pages : https://www.youtube.com/watch?v=4yQ27SSnWzk
-
-
