@@ -48,12 +48,13 @@ class Projects extends StatelessWidget {
           tech3: "API",
         ),
         FeatureProject(
-          imagePath: "assets/videos/atlas_show.gif",
+          imagePath: "assets/videos/water_belt_show.gif",
           icons: [
             IconButton(
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
-                Config.launchURL("https://github.com/teujorge/atlas");
+                Config.launchURL(
+                    "https://github.com/teujorge/Arduino-Water-Belt");
               },
             ),
           ],
@@ -65,13 +66,12 @@ class Projects extends StatelessWidget {
           tech3: "Protoype",
         ),
         FeatureProject(
-          imagePath: "assets/videos/water_belt_show.gif",
+          imagePath: "assets/videos/atlas_show.gif",
           icons: [
             IconButton(
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
-                Config.launchURL(
-                    "https://github.com/teujorge/Arduino-Water-Belt");
+                Config.launchURL("https://github.com/teujorge/atlas");
               },
             ),
           ],
