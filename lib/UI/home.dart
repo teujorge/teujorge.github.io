@@ -50,71 +50,75 @@ class _HomePageState extends State<HomePage> {
     Config.size = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TopNavigation(_autoScrollController, _scrollToIndex),
-            Row(
-              children: [
-                LeftBorder(),
-                Expanded(
-                  child: Container(
-                    height: Config.size.height - Config.screenMargin,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: CustomScrollView(
-                        controller: _autoScrollController,
-                        slivers: <Widget>[
-                          SliverList(
-                            delegate: SliverChildListDelegate(
-                              [
-                                // home
-                                Parallax(offset),
+        child: SizedBox(
+          height: Config.size.height,
+          width: Config.size.width,
+          child: Column(
+            children: [
+              TopNavigation(_autoScrollController, _scrollToIndex),
+              Row(
+                children: [
+                  LeftBorder(),
+                  Expanded(
+                    child: Container(
+                      height: Config.size.height - Config.screenMargin,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: CustomScrollView(
+                          controller: _autoScrollController,
+                          slivers: <Widget>[
+                            SliverList(
+                              delegate: SliverChildListDelegate(
+                                [
+                                  // home
+                                  Parallax(offset),
 
-                                // about me
-                                _wrapScrollTag(
-                                  index: 0,
-                                  child: About(),
-                                ),
-                                SizedBox(
-                                  height: Config.size.height * 0.02,
-                                ),
+                                  // about me
+                                  _wrapScrollTag(
+                                    index: 0,
+                                    child: About(),
+                                  ),
+                                  SizedBox(
+                                    height: Config.size.height * 0.02,
+                                  ),
 
-                                // work exp
-                                _wrapScrollTag(
-                                  index: 1,
-                                  child: Work(),
-                                ),
-                                SizedBox(
-                                  height: Config.size.height * 0.10,
-                                ),
+                                  // work exp
+                                  _wrapScrollTag(
+                                    index: 1,
+                                    child: Work(),
+                                  ),
+                                  SizedBox(
+                                    height: Config.size.height * 0.10,
+                                  ),
 
-                                // projects
-                                _wrapScrollTag(
-                                  index: 2,
-                                  child: Projects(),
-                                ),
+                                  // projects
+                                  _wrapScrollTag(
+                                    index: 2,
+                                    child: Projects(),
+                                  ),
 
-                                SizedBox(
-                                  height: 6.0,
-                                ),
+                                  SizedBox(
+                                    height: 6.0,
+                                  ),
 
-                                // contact me
-                                _wrapScrollTag(
-                                  index: 3,
-                                  child: Contact(),
-                                ),
-                              ],
+                                  // contact me
+                                  _wrapScrollTag(
+                                    index: 3,
+                                    child: Contact(),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
-                ),
-                RightBorder(),
-              ],
-            ),
-          ],
+                  RightBorder(),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
