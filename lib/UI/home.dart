@@ -61,7 +61,8 @@ class _HomePageState extends State<HomePage> {
                   LeftBorder(),
                   Expanded(
                     child: Container(
-                      height: Config.size.height - Config.screenMargin,
+                      height: Config.size.height -
+                          Config.size.height * Config.screenMargin,
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0),
                         child: CustomScrollView(
