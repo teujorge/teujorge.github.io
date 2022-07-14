@@ -33,11 +33,7 @@ class Contact extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              CustomText(
-                text: "0.4 What's Next?",
-                textsize: 16.0,
-                letterSpacing: 3.0,
-              ),
+              MainHeader(number: "04.", text: "What's Next?"),
               SizedBox(
                 height: 16.0,
               ),

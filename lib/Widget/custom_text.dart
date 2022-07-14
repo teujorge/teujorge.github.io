@@ -47,13 +47,6 @@ class MainHeader extends StatelessWidget {
           textsize: 26.0,
           fontWeight: FontWeight.w700,
         ),
-        SizedBox(
-          width: 26.0,
-        ),
-        Container(
-          width: MediaQuery.of(context).size.width / 4,
-          height: 0.75,
-        ),
       ],
     );
   }

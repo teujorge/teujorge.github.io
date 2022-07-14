@@ -12,7 +12,7 @@ class Projects extends StatelessWidget {
     return Column(
       children: [
         MainHeader(
-          number: "0.3",
+          number: "03.",
           text: "Projects",
         ),
         SizedBox(
@@ -65,7 +65,7 @@ class Projects extends StatelessWidget {
           projectTitle: "Water Tag",
           tech1: "Arduino",
           tech2: "Embedded System",
-          tech3: "Protoype",
+          tech3: "",
         ),
         FeatureProject(
           imagePath: "assets/videos/atlas_show.gif",

@@ -21,31 +21,7 @@ class _WorkState extends State<Work> {
       ),
       child: Column(
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomText(
-                text: "02.",
-                textsize: 20.0,
-                fontWeight: FontWeight.w700,
-              ),
-              SizedBox(
-                width: 12.0,
-              ),
-              CustomText(
-                text: "Experience",
-                textsize: 26.0,
-                fontWeight: FontWeight.w700,
-              ),
-              SizedBox(
-                width: Config.size.width * 0.01,
-              ),
-              Container(
-                width: Config.size.width / 4,
-                height: 1.10,
-              ),
-            ],
-          ),
+          MainHeader(number: "02.", text: "Experience"),
           SizedBox(
             height: Config.size.height * 0.07,
           ),

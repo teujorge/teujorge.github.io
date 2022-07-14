@@ -75,27 +75,7 @@ class About extends StatelessWidget {
       child: Column(
         children: [
           //About me title
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              CustomText(
-                text: "01.",
-                textsize: 20.0,
-                fontWeight: FontWeight.w700,
-              ),
-              SizedBox(
-                width: 12.0,
-              ),
-              CustomText(
-                text: "About Me",
-                textsize: 26.0,
-                fontWeight: FontWeight.w700,
-              ),
-              SizedBox(
-                width: Config.size.width * 0.01,
-              ),
-            ],
-          ),
+          MainHeader(number: "01.", text: "About Me"),
 
           // image in col if small screen
           smallScreen ? showProfileImage() : SizedBox(),
