@@ -49,8 +49,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     Config.size = MediaQuery.of(context).size;
     return Scaffold(
-      body: NotificationListener<ScrollNotification>(
-        // onNotification: _updateOffsetAccordingToScroll,
+      body: SingleChildScrollView(
         child: Column(
           children: [
             TopNavigation(_autoScrollController, _scrollToIndex),
@@ -68,9 +67,10 @@ class _HomePageState extends State<HomePage> {
                           SliverList(
                             delegate: SliverChildListDelegate(
                               [
+                                // home
                                 Parallax(offset),
 
-                                //About Me
+                                // about me
                                 _wrapScrollTag(
                                   index: 0,
                                   child: About(),
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> {
                                   height: Config.size.height * 0.02,
                                 ),
 
-                                // Work
+                                // work exp
                                 _wrapScrollTag(
                                   index: 1,
                                   child: Work(),
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                                   height: Config.size.height * 0.10,
                                 ),
 
-                                // Projects
+                                // projects
                                 _wrapScrollTag(
                                   index: 2,
                                   child: Projects(),
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                                   height: 6.0,
                                 ),
 
-                                //Get In Touch
+                                // contact me
                                 _wrapScrollTag(
                                   index: 3,
                                   child: Contact(),
