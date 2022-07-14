@@ -59,10 +59,8 @@ class Parallax extends StatelessWidget {
                 text: "images.nasa.gov",
                 textsize: 10,
               )),
-          SizedBox(
-            height: Config.size.height * .06,
-          ),
           Container(
+            height: Config.size.height,
             padding: EdgeInsets.all(1 + Config.size.width / 100),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
