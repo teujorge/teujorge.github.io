@@ -63,7 +63,7 @@ class Parallax extends StatelessWidget {
             height: Config.size.height * .06,
           ),
           Container(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(1 + Config.size.width / 100),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -78,7 +78,7 @@ class Parallax extends StatelessWidget {
                 ),
                 CustomText(
                   text: "Matheus Jorge.",
-                  textsize: 68.0,
+                  textsize: 25 + Config.size.width / 15, //68.0,
                   fontWeight: FontWeight.w900,
                 ),
                 SizedBox(
@@ -86,7 +86,7 @@ class Parallax extends StatelessWidget {
                 ),
                 CustomText(
                   text: "I engineer things!",
-                  textsize: 56.0,
+                  textsize: 15 + Config.size.width / 20, //56.0,
                   fontWeight: FontWeight.w700,
                 ),
                 SizedBox(
@@ -104,7 +104,7 @@ class Parallax extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: Config.size.height * 0.20,
+                  height: Config.size.height * 0.1,
                 ),
               ],
             ),

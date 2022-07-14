@@ -23,127 +23,136 @@ class FeatureProject extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bool smallScreen = Config.size.height > Config.size.width;
     return Container(
-      height: Config.size.height / 0.999,
-      width: Config.size.width - 100,
-      child: Column(
+      height: Config.size.height * 0.9,
+      width: Config.size.width * 0.95,
+      child: Stack(
         children: [
-          Container(
-            height: Config.size.height - 100,
-            width: Config.size.width - 84,
-            child: Stack(
-              children: [
-                //Image
-                Positioned(
-                  top: Config.size.height * 0.02,
-                  left: 20.0,
-                  child: Container(
-                    height: Config.size.height * 0.60,
-                    width: Config.size.width * 0.5,
-                    child: Image(
-                      fit: BoxFit.contain,
-                      image: AssetImage(imagePath),
-                    ),
+          // Project Title
+          Positioned(
+            top: 0.0,
+            right: 10.0,
+            child: Container(
+              height: Config.size.height * 0.10,
+              width: Config.size.width * 1,
+              child: Wrap(
+                // mainAxisAlignment: MainAxisAlignment.end,
+                alignment: WrapAlignment.end,
+                children: [
+                  CustomText(
+                    text: projectTitle,
+                    textsize: 27,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 1.75,
                   ),
-                ),
+                ],
+              ),
+            ),
+          ),
 
-                // Short Desc
-                Positioned(
-                  top: Config.size.height / 6,
-                  right: 10.0,
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: Config.size.height * 0.18,
-                    width: Config.size.width * 0.35,
-                    color: Colors.blue.withAlpha(150),
-                    child: Wrap(
-                      alignment: WrapAlignment.center,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                          child: CustomText(
-                            text: projectDesc,
-                            textsize: 16.0,
-                            letterSpacing: 0.75,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+          //Image
+          Positioned(
+            top: 10,
+            left: smallScreen ? null : 20.0,
+            child: Container(
+              height: smallScreen
+                  ? Config.size.height * 0.60
+                  : Config.size.height * 0.60,
+              width: smallScreen
+                  ? Config.size.width * 0.8
+                  : Config.size.width * 0.5,
+              child: Image(
+                fit: BoxFit.contain,
+                image: AssetImage(imagePath),
+              ),
+            ),
+          ),
 
-                // Project Title
-                Positioned(
-                  top: 16.0,
-                  right: 10.0,
-                  child: Container(
-                    height: Config.size.height * 0.10,
-                    width: Config.size.width * 0.25,
-                    child: Wrap(
-                      // mainAxisAlignment: MainAxisAlignment.end,
-                      alignment: WrapAlignment.end,
-                      children: [
-                        CustomText(
-                          text: projectTitle,
-                          textsize: 27,
-                          fontWeight: FontWeight.w700,
-                          letterSpacing: 1.75,
-                        ),
-                      ],
+          // Short Desc
+          Positioned(
+            top: smallScreen
+                ? Config.size.height * 0.50
+                : Config.size.height / 6,
+            right: 10.0,
+            child: Container(
+              alignment: Alignment.center,
+              height: smallScreen
+                  ? Config.size.height * 0.25
+                  : Config.size.height * 0.20,
+              width: smallScreen
+                  ? Config.size.width * 0.70
+                  : Config.size.width * 0.35,
+              color: Colors.blue.withAlpha(150),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: CustomText(
+                      text: projectDesc,
+                      textsize: 16.0,
+                      letterSpacing: 0.75,
                     ),
                   ),
-                ),
+                ],
+              ),
+            ),
+          ),
 
-                // Project Resources
-                Positioned(
-                  top: Config.size.height * 0.36,
-                  right: 10.0,
-                  child: Container(
-                    height: Config.size.height * 0.08,
-                    width: Config.size.width * 0.25,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        CustomText(
-                          text: tech1 == null ? "" : tech1,
-                          textsize: 14,
-                          letterSpacing: 1.75,
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        CustomText(
-                          text: tech2 == null ? "" : tech2,
-                          textsize: 14,
-                          letterSpacing: 1.75,
-                        ),
-                        SizedBox(
-                          width: 16.0,
-                        ),
-                        CustomText(
-                          text: tech3 == null ? "" : tech3,
-                          textsize: 14,
-                          letterSpacing: 1.75,
-                        ),
-                      ],
-                    ),
+          // Project Resources
+          Positioned(
+            top: smallScreen
+                ? Config.size.height * 0.75
+                : Config.size.height * 0.36,
+            right: smallScreen ? null : 10.0,
+            left: smallScreen ? 10 : null,
+            child: Container(
+              height: Config.size.height * 0.08,
+              // width: Config.size.width * 0.25,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  CustomText(
+                    text: tech1 == null ? "" : tech1,
+                    textsize: 14,
+                    letterSpacing: 1.75,
                   ),
-                ),
+                  SizedBox(
+                    width: 16.0,
+                  ),
+                  CustomText(
+                    text: tech2 == null ? "" : tech2,
+                    textsize: 14,
+                    letterSpacing: 1.75,
+                  ),
+                  SizedBox(
+                    width: 16.0,
+                  ),
+                  CustomText(
+                    text: tech3 == null ? "" : tech3,
+                    textsize: 14,
+                    letterSpacing: 1.75,
+                  ),
+                ],
+              ),
+            ),
+          ),
 
-                // Gitub Link
-                Positioned(
-                  top: Config.size.height * 0.42,
-                  right: 10.0,
-                  child: Container(
-                    height: Config.size.height * 0.08,
-                    width: Config.size.width * 0.25,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: icons,
-                    ),
-                  ),
-                ),
-              ],
+          // icon links
+          Positioned(
+            top: smallScreen
+                ? Config.size.height * 0.8
+                : Config.size.height * 0.42,
+            right: smallScreen ? null : 10.0,
+            left: smallScreen ? 0 : null,
+            child: Container(
+              height: Config.size.height * 0.08,
+              // width: Config.size.width * 0.25,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: icons,
+              ),
             ),
           ),
         ],

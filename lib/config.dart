@@ -2,7 +2,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 
 class Config {
-  static final int screenMargin = 110;
+  static final int screenMargin = 0;
   static Size size = Size(0, 0);
 
   static final buttonStyle = ButtonStyle(

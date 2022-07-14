@@ -8,6 +8,7 @@ import '../config.dart';
 class Projects extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final bool smallScreen = Config.size.height > Config.size.width;
     return Column(
       children: [
         MainHeader(

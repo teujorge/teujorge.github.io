@@ -13,10 +13,11 @@ class Work extends StatefulWidget {
 class _WorkState extends State<Work> {
   @override
   Widget build(BuildContext context) {
+    bool smallScreen = Config.size.height > Config.size.width;
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(
         width: Config.size.width,
-        height: Config.size.height * 1.4,
+        height: Config.size.height * 1.2,
       ),
       child: Column(
         children: [
@@ -70,23 +71,32 @@ class _WorkState extends State<Work> {
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
                               CircleAvatar(
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.primary,
                                 child: FaIcon(
-                                  FontAwesomeIcons.laptopHouse,
+                                  // FontAwesomeIcons.laptopCode,
+                                  FontAwesomeIcons.laptop,
                                 ),
                               ),
                               CircleAvatar(
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.secondary,
+                                child: FaIcon(
+                                  FontAwesomeIcons.codeBranch,
+                                ),
+                              ),
+                              CircleAvatar(
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.primary,
                                 child: FaIcon(
                                   FontAwesomeIcons.freeCodeCamp,
                                 ),
                               ),
                               CircleAvatar(
+                                backgroundColor:
+                                    Theme.of(context).colorScheme.secondary,
                                 child: FaIcon(
-                                  FontAwesomeIcons.laptopCode,
-                                ),
-                              ),
-                              CircleAvatar(
-                                child: FaIcon(
-                                  FontAwesomeIcons.coffee,
+                                  FontAwesomeIcons.mugHot,
                                 ),
                               ),
                             ],
@@ -98,7 +108,7 @@ class _WorkState extends State<Work> {
                 ),
               ),
               Expanded(
-                  flex: 4,
+                  flex: smallScreen ? 5 : 4,
                   child: Container(
                     height: Config.size.height,
                     child: Column(
