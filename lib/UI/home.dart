@@ -50,6 +50,9 @@ class _HomePageState extends State<HomePage> {
     Config.size = MediaQuery.of(context).size;
     Config.smallScreen = Config.size.height > Config.size.width;
     return Scaffold(
+      // avoid flutter iOS web blank space bug
+      backgroundColor: Theme.of(context).colorScheme.background,
+      // main content
       body: SafeArea(
         child: SingleChildScrollView(
           child: SizedBox(
