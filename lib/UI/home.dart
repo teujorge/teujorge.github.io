@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     Config.size = MediaQuery.of(context).size;
+    Config.smallScreen = Config.size.height > Config.size.width;
     return Scaffold(
       body: SafeArea(
         child: SingleChildScrollView(

@@ -24,41 +24,31 @@ class About extends StatelessWidget {
     );
   }
 
+//Profile Image
   Widget showProfileImage() {
-    return //Profile Image
-        Expanded(
-      child: Container(
-        height: Config.size.height / 1.5,
-        width: Config.size.width / 2,
+    return Padding(
+      padding: const EdgeInsets.all(20),
+      child: SizedBox(
+        height: Config.smallScreen
+            ? Config.size.height / 3
+            : Config.size.height / 2,
+        width: Config.smallScreen ? Config.size.width : Config.size.width / 4.5,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Positioned(
-              top: Config.size.height * 0.12,
-              left: Config.size.width * 0.120,
+              top: 15,
+              right: 15,
               child: Card(
-                child: Container(
-                  margin: EdgeInsets.all(2.75),
-                  height: Config.size.height / 2,
-                  width: Config.size.width / 5,
-                ),
+                color: Colors.black.withAlpha(10),
               ),
             ),
-            Stack(
-              children: [
-                Container(
-                  height: Config.size.height / 2,
-                  width: Config.size.width / 5,
-                  child: Image(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/images/profile.jpeg"),
-                  ),
-                ),
-                Container(
-                  height: Config.size.height / 2,
-                  width: Config.size.width / 5,
-                ),
-              ],
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image(
+                fit: BoxFit.contain,
+                image: AssetImage("assets/images/profile.jpeg"),
+              ),
             ),
           ],
         ),
@@ -68,9 +58,7 @@ class About extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool smallScreen = Config.size.height > Config.size.width;
     return Container(
-      height: Config.size.height,
       width: Config.size.width,
       child: Column(
         children: [
@@ -78,17 +66,16 @@ class About extends StatelessWidget {
           MainHeader(number: "01.", text: "About Me"),
 
           // image in col if small screen
-          smallScreen ? showProfileImage() : SizedBox(),
+          Config.smallScreen ? showProfileImage() : SizedBox(),
 
           // content
           Row(
             children: [
               //About me
               Container(
-                height: Config.size.height * 0.9,
-                width: smallScreen
+                width: Config.smallScreen
                     ? Config.size.width * 0.70
-                    : Config.size.width / 2,
+                    : Config.size.width / 2.25,
                 child: Column(
                   children: [
                     SizedBox(
@@ -120,15 +107,15 @@ class About extends StatelessWidget {
                     ),
 
                     Container(
-                      height: Config.size.height * 0.15,
+                      // height: Config.size.height * 0.15,
                       width: Config.size.width,
                       child: Wrap(
                         children: [
                           Container(
-                            width: smallScreen
+                            width: Config.smallScreen
                                 ? Config.size.width * 0.7
                                 : Config.size.width * 0.20,
-                            height: Config.size.height * 0.10,
+                            // height: Config.size.height * 0.10,
                             child: Column(
                               children: [
                                 technology(context, "Dart/Flutter"),
@@ -138,10 +125,10 @@ class About extends StatelessWidget {
                             ),
                           ),
                           Container(
-                            width: smallScreen
+                            width: Config.smallScreen
                                 ? Config.size.width * 0.7
                                 : Config.size.width * 0.20,
-                            height: Config.size.height * 0.10,
+                            // height: Config.size.height * 0.10,
                             child: Column(
                               children: [
                                 technology(context, "MATLAB"),
@@ -157,7 +144,7 @@ class About extends StatelessWidget {
                 ),
               ),
               // image in row if big screen
-              smallScreen ? SizedBox() : showProfileImage(),
+              Config.smallScreen ? SizedBox() : showProfileImage(),
             ],
           ),
         ],

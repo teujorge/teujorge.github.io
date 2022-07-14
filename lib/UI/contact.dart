@@ -28,7 +28,7 @@ class Contact extends StatelessWidget {
     return Column(
       children: [
         Container(
-          height: Config.size.height * 0.68,
+          // height: Config.size.height * 0.68,
           width: MediaQuery.of(context).size.width - 100,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

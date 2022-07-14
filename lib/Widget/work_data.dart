@@ -14,7 +14,6 @@ class WorkData extends StatelessWidget {
       required this.duration});
   @override
   Widget build(BuildContext context) {
-    final bool smallScreen = Config.size.height > Config.size.width;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -22,7 +21,7 @@ class WorkData extends StatelessWidget {
         Text(
           title,
           style: TextStyle(
-            fontSize: smallScreen ? 10 + Config.size.width / 50 : 22.0,
+            fontSize: Config.smallScreen ? 10 + Config.size.width / 50 : 22.0,
             fontWeight: FontWeight.w700,
           ),
         ),
@@ -33,7 +32,7 @@ class WorkData extends StatelessWidget {
           subTitle,
           style: TextStyle(
             fontSize: 13.0,
-            fontWeight: smallScreen ? null : FontWeight.w600,
+            fontWeight: Config.smallScreen ? null : FontWeight.w600,
           ),
         ),
         SizedBox(
@@ -43,7 +42,7 @@ class WorkData extends StatelessWidget {
           duration,
           style: TextStyle(
             fontSize: 12.0,
-            fontWeight: smallScreen ? null : FontWeight.w700,
+            fontWeight: Config.smallScreen ? null : FontWeight.w700,
           ),
         ),
       ],

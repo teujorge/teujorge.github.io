@@ -32,8 +32,12 @@ class MainHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
+        SizedBox(
+          height: 100,
+        ),
         CustomText(
           text: number,
           textsize: 20.0,

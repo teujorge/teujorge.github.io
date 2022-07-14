@@ -11,7 +11,7 @@ class Parallax extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: Config.size.height * 0.8,
+      // height: Config.size.height * 0.8,
       width: Config.size.width * 0.9,
       child: Stack(
         children: [

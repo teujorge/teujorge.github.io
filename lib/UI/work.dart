@@ -13,11 +13,10 @@ class Work extends StatefulWidget {
 class _WorkState extends State<Work> {
   @override
   Widget build(BuildContext context) {
-    bool smallScreen = Config.size.height > Config.size.width;
     return ConstrainedBox(
       constraints: BoxConstraints.tightFor(
         width: Config.size.width,
-        height: Config.size.height * 1.2,
+        // height: Config.size.height * 1.2,
       ),
       child: Column(
         children: [
@@ -84,9 +83,9 @@ class _WorkState extends State<Work> {
                 ),
               ),
               Expanded(
-                  flex: smallScreen ? 5 : 4,
+                  flex: Config.smallScreen ? 5 : 4,
                   child: Container(
-                    height: Config.size.height,
+                    // height: Config.size.height,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.start,
