@@ -16,6 +16,8 @@ class TopNavigation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double letterSpacing = Config.size.width / 300 + 1;
+    final double buttonSpacing = 8;
+    final double buttonRadius = 10;
     // small screen
     if (Config.size.height > Config.size.width) {
       return Container(
@@ -38,61 +40,86 @@ class TopNavigation extends StatelessWidget {
                     builder: (BuildContext context) {
                       return BackdropFilter(
                         filter: ui.ImageFilter.blur(
-                          sigmaX: 10,
-                          sigmaY: 10,
+                          sigmaX: 20,
+                          sigmaY: 20,
                         ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            TextButton(
-                              onPressed: () {
-                                _scrollToIndex(0);
-                                Navigator.of(context).pop();
-                              },
-                              style: Config.buttonStyle,
-                              child: CustomText(
-                                text: 'About',
-                                textsize: 14,
-                                letterSpacing: letterSpacing,
+                            Padding(
+                              padding: EdgeInsets.all(buttonSpacing),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(buttonRadius),
+                                child: TextButton(
+                                  onPressed: () {
+                                    _scrollToIndex(0);
+                                    Navigator.of(context).pop();
+                                  },
+                                  style: Config.buttonStyle,
+                                  child: CustomText(
+                                    text: 'About',
+                                    textsize: 14,
+                                    letterSpacing: letterSpacing,
+                                  ),
+                                ),
                               ),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                _scrollToIndex(1);
-                                Navigator.of(context).pop();
-                              },
-                              style: Config.buttonStyle,
-                              child: CustomText(
-                                text: 'Experience',
-                                textsize: 14,
-                                letterSpacing: letterSpacing,
-                                color: Theme.of(context).colorScheme.primary,
+                            Padding(
+                              padding: EdgeInsets.all(buttonSpacing),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(buttonRadius),
+                                child: TextButton(
+                                  onPressed: () {
+                                    _scrollToIndex(1);
+                                    Navigator.of(context).pop();
+                                  },
+                                  style: Config.buttonStyle,
+                                  child: CustomText(
+                                    text: 'Experience',
+                                    textsize: 14,
+                                    letterSpacing: letterSpacing,
+                                  ),
+                                ),
                               ),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                _scrollToIndex(2);
-                                Navigator.of(context).pop();
-                              },
-                              style: Config.buttonStyle,
-                              child: CustomText(
-                                text: 'Projects',
-                                textsize: 14,
-                                letterSpacing: letterSpacing,
-                                color: Theme.of(context).colorScheme.secondary,
+                            Padding(
+                              padding: EdgeInsets.all(buttonSpacing),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(buttonRadius),
+                                child: TextButton(
+                                  onPressed: () {
+                                    _scrollToIndex(2);
+                                    Navigator.of(context).pop();
+                                  },
+                                  style: Config.buttonStyle,
+                                  child: CustomText(
+                                    text: 'Projects',
+                                    textsize: 14,
+                                    letterSpacing: letterSpacing,
+                                  ),
+                                ),
                               ),
                             ),
-                            TextButton(
-                              onPressed: () {
-                                _scrollToIndex(3);
-                                Navigator.of(context).pop();
-                              },
-                              style: Config.buttonStyle,
-                              child: CustomText(
-                                text: 'Contact Me',
-                                textsize: 14,
-                                letterSpacing: letterSpacing,
-                                color: Theme.of(context).colorScheme.tertiary,
+                            Padding(
+                              padding: EdgeInsets.all(buttonSpacing),
+                              child: ClipRRect(
+                                borderRadius:
+                                    BorderRadius.circular(buttonRadius),
+                                child: TextButton(
+                                  onPressed: () {
+                                    _scrollToIndex(3);
+                                    Navigator.of(context).pop();
+                                  },
+                                  style: Config.buttonStyle,
+                                  child: CustomText(
+                                    text: 'Contact Me',
+                                    textsize: 14,
+                                    letterSpacing: letterSpacing,
+                                  ),
+                                ),
                               ),
                             ),
                           ],
