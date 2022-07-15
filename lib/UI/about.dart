@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../Widget/custom_text.dart';
 import '../config.dart';
@@ -45,9 +46,17 @@ class About extends StatelessWidget {
             ),
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image(
-                fit: BoxFit.contain,
-                image: AssetImage("assets/images/profile.jpeg"),
+              child: Stack(
+                children: [
+                  Center(child: CircularProgressIndicator()),
+                  Center(
+                    child: FadeInImage.memoryNetwork(
+                      placeholder: kTransparentImage,
+                      image:
+                          "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/profile.jpeg",
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
