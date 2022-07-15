@@ -195,7 +195,7 @@ class LeftBorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Config.size.width * 0.04 + 20,
-      height: Config.size.height - Config.size.height * Config.screenMargin,
+      height: Config.size.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -243,7 +243,7 @@ class RightBorder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: Config.size.width * 0.04 + 20,
-      height: Config.size.height - Config.size.height * Config.screenMargin,
+      height: Config.size.height,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [

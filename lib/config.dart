@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class Config {
   static Size size = Size(0, 0);
   static bool smallScreen = false;
-  static double screenMargin = 0.1;
 
   static final buttonStyle = ButtonStyle(
     elevation: MaterialStateProperty.all(4),
