@@ -12,8 +12,10 @@ class MyApp extends StatelessWidget {
       title: 'Matheus Jorge',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
-      theme: ThemeData.from(colorScheme: ColorScheme.light()),
-      darkTheme: ThemeData.from(colorScheme: ColorScheme.dark()),
+      theme: ThemeData(
+          fontFamily: "Proxima Nova", colorScheme: ColorScheme.light()),
+      darkTheme: ThemeData(
+          fontFamily: "Proxima Nova", colorScheme: ColorScheme.dark()),
     );
   }
 }
