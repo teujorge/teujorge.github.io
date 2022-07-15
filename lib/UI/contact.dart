@@ -76,7 +76,10 @@ class Contact extends StatelessWidget {
               ElevatedButton(
                 style: Config.buttonStyle,
                 onPressed: () {
-                  html.window.open("Resume-2022.png", "MatheusResume");
+                  html.window.open(
+                    "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/Resume-2022.pdf",
+                    "MatheusResume",
+                  );
                 },
                 child: Text("Get Resume"),
               ),
