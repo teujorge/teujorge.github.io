@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:transparent_image/transparent_image.dart';
 import 'custom_text.dart';
 import '../config.dart';
 
@@ -57,9 +58,16 @@ class FeatureProject extends StatelessWidget {
               width: Config.smallScreen
                   ? Config.size.width * 0.7
                   : Config.size.width * 0.5,
-              child: Image(
-                fit: BoxFit.contain,
-                image: AssetImage(imagePath),
+              child: Stack(
+                children: [
+                  Center(child: CircularProgressIndicator()),
+                  Center(
+                    child: FadeInImage.memoryNetwork(
+                      placeholder: kTransparentImage,
+                      image: imagePath,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

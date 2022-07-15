@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 import '../Widget/custom_text.dart';
 import '../config.dart';
@@ -17,8 +18,7 @@ class Parallax extends StatelessWidget {
         children: [
           Positioned(
             bottom: offset * 1,
-            child: Container(
-              // color: Colors.blue.withAlpha(100),
+            child: SizedBox(
               height: Config.size.height,
               width: Config.size.width,
             ),
@@ -26,29 +26,26 @@ class Parallax extends StatelessWidget {
           Positioned(
             bottom: offset * 2,
             right: 0,
-            child: Container(
-              // color: Colors.red.withAlpha(100),
+            child: SizedBox(
               height: Config.size.height / 2,
               width: Config.size.width / 2,
-              child: Image.asset(
-                "assets/images/earth.png",
+              child: FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image:
+                    "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/earth.png",
               ),
-              // child: FadeInImage.assetNetwork(
-              //   placeholder:
-              //       "assets/images/earth_t.png",
-              //   image: "assets/images/earth.png",
-              // ),
             ),
           ),
           Positioned(
             bottom: offset * 4,
             right: 0,
-            child: Container(
-              // color: Colors.green.withAlpha(100),
+            child: SizedBox(
               height: Config.size.height / 10,
               width: Config.size.width / 10,
-              child: Image.asset(
-                "assets/images/moon.png",
+              child: FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image:
+                    "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/moon.png",
               ),
             ),
           ),

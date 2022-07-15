@@ -18,7 +18,8 @@ class Projects extends StatelessWidget {
           height: Config.size.height * 0.04,
         ),
         FeatureProject(
-          imagePath: "assets/images/movie_matter.png",
+          imagePath:
+              "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/movie_matter.png",
           icons: [
             IconButton(
               icon: FaIcon(FontAwesomeIcons.appStoreIos),
@@ -49,7 +50,8 @@ class Projects extends StatelessWidget {
           tech3: "API",
         ),
         FeatureProject(
-          imagePath: "assets/videos/water_belt_show.gif",
+          imagePath:
+              "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/water_belt_show.gif",
           icons: [
             IconButton(
               icon: FaIcon(FontAwesomeIcons.github),
@@ -67,7 +69,8 @@ class Projects extends StatelessWidget {
           tech3: "",
         ),
         FeatureProject(
-          imagePath: "assets/videos/atlas_show.gif",
+          imagePath:
+              "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/atlas_show.gif",
           icons: [
             IconButton(
               icon: FaIcon(FontAwesomeIcons.github),
