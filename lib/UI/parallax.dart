@@ -49,13 +49,14 @@ class Parallax extends StatelessWidget {
               ),
             ),
           ),
-          Positioned(
-              top: 0,
-              right: 0,
-              child: CustomText(
-                text: "images.nasa.gov",
-                textsize: 10,
-              )),
+          // Positioned(
+          //   top: 0,
+          //   right: 0,
+          //   child: CustomText(
+          //     text: "images.nasa.gov",
+          //     textsize: 10,
+          //   ),
+          // ),
           Container(
             height: Config.size.height,
             padding: EdgeInsets.all(1 + Config.size.width / 100),
