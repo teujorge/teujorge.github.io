@@ -22,6 +22,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/movie_matter.png",
           icons: [
             IconButton(
+              iconSize: 35,
               color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.appStoreIos),
               onPressed: () {
@@ -30,6 +31,7 @@ class Projects extends StatelessWidget {
               },
             ),
             IconButton(
+              iconSize: 35,
               color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.googlePlay),
               onPressed: () {
@@ -38,6 +40,7 @@ class Projects extends StatelessWidget {
               },
             ),
             IconButton(
+              iconSize: 35,
               color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
@@ -57,6 +60,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/water_belt_show.gif",
           icons: [
             IconButton(
+              iconSize: 35,
               color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
@@ -77,6 +81,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/atlas_show.gif",
           icons: [
             IconButton(
+              iconSize: 35,
               color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
