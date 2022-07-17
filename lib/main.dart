@@ -15,12 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: "Proxima Nova",
         colorScheme: ColorScheme.light(),
-        primaryColor: ColorScheme.light().primary,
       ),
       darkTheme: ThemeData(
         fontFamily: "Proxima Nova",
         colorScheme: ColorScheme.dark(),
-        primaryColor: ColorScheme.dark().primary,
       ),
     );
   }
