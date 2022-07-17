@@ -21,8 +21,7 @@ class TopNavigation extends StatelessWidget {
     // small screen
     if (Config.size.height > Config.size.width) {
       return Container(
-        height: Config.size.height * 0.05,
-        width: Config.size.width,
+        height: Config.size.height * 0.025 + 25,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
