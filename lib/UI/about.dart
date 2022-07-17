@@ -96,19 +96,19 @@ class About extends StatelessWidget {
                       children: [
                         CustomText(
                           text:
-                              "Hello! I am Matheus.\n\nI enjoy developing products using technology, whether that be physical or virutal.\n\n",
+                              "Hello! I am Matheus.\n\nI enjoy developing products using technology, whether that be physical or virtual.\n\n",
                           textsize: 16.0,
                           letterSpacing: 0.75,
                         ),
                         CustomText(
                           text:
-                              "Shortly currently, I am a Mechanical Engineer by trade currently accruing my software expertise by working on a variety of interesting projects on a daily basis.\n\n",
+                              "I strive to make a contribution to society through technology and engineering in order to bring comfort to the world. I am constantly looking to further develop my technical, communication and interpersonal skills. Shortly, I am a Mechanical Engineer by trade currently accruing my software expertise by working on a variety of interesting projects on a daily basis.\n\n",
                           textsize: 16.0,
                           letterSpacing: 0.75,
                         ),
                         CustomText(
                           text:
-                              "Here are a few technologies I've been working with recently:\n\n",
+                              "Here are a few technologies I have enjoyed working with:\n\n",
                           textsize: 16.0,
                           letterSpacing: 0.75,
                         ),
