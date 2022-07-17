@@ -13,9 +13,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: HomePage(),
       theme: ThemeData(
-          fontFamily: "Proxima Nova", colorScheme: ColorScheme.light()),
+        fontFamily: "Proxima Nova",
+        colorScheme: ColorScheme.light(),
+        primaryColor: ColorScheme.light().primary,
+      ),
       darkTheme: ThemeData(
-          fontFamily: "Proxima Nova", colorScheme: ColorScheme.dark()),
+        fontFamily: "Proxima Nova",
+        colorScheme: ColorScheme.dark(),
+        primaryColor: ColorScheme.dark().primary,
+      ),
     );
   }
 }
