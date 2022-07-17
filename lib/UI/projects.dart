@@ -22,6 +22,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/images/movie_matter.png",
           icons: [
             IconButton(
+              color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.appStoreIos),
               onPressed: () {
                 Config.launchURL(
@@ -29,6 +30,7 @@ class Projects extends StatelessWidget {
               },
             ),
             IconButton(
+              color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.googlePlay),
               onPressed: () {
                 Config.launchURL(
@@ -36,6 +38,7 @@ class Projects extends StatelessWidget {
               },
             ),
             IconButton(
+              color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
                 Config.launchURL("https://github.com/teujorge/MovieMatter");
@@ -54,6 +57,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/water_belt_show.gif",
           icons: [
             IconButton(
+              color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
                 Config.launchURL(
@@ -73,6 +77,7 @@ class Projects extends StatelessWidget {
               "https://raw.githubusercontent.com/teujorge/teujorge.github.io/master/assets/videos/atlas_show.gif",
           icons: [
             IconButton(
+              color: Theme.of(context).colorScheme.primary,
               icon: FaIcon(FontAwesomeIcons.github),
               onPressed: () {
                 Config.launchURL("https://github.com/teujorge/atlas");
