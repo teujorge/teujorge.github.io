@@ -104,6 +104,15 @@ class _HomePageState extends State<HomePage> {
                             index: 3,
                             child: Contact(),
                           ),
+
+                          // boo
+                          SizedBox(
+                            height: Config.size.height * 0.25,
+                            width: Config.size.height * 0.8,
+                            child: Center(
+                              child: Image.asset("assets/images/eyes.jpg"),
+                            ),
+                          ),
                         ],
                       ),
                     ),
